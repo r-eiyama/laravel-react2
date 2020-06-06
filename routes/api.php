@@ -22,3 +22,7 @@ Route::get('/user', function (Request $request) {
     $users = \App\User::all();
     return response()->json(['users' => $users]);
 });
+
+Route::get('/user/{user}', function (\App\User $user){
+    return response()->json(['user' => $user]);
+});

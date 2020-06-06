@@ -7,7 +7,7 @@ function User() {
 
     useEffect(() => {
         getUsers()
-    },[]);
+    }, []);
 
     const getUsers = async () => {
         const response = await axios.get('/api/user');
@@ -20,15 +20,15 @@ function User() {
             <h1>Userページ</h1>
             <ul>
                 {users.map((user) =>
-                    <li key={user.id} >
-                    {user.name}
-                    <Link to={`/user/${user.id}`}>
-                        詳細
-                    </Link>
-                </li> )}
+                    <li key={user.id}>
+                        {user.name}
+                        <Link to={`/user/${user.id}`}>
+                            詳細
+                        </Link>
+                    </li>)}
             </ul>
         </div>
-        );
+    );
 }
 
 export default User;
