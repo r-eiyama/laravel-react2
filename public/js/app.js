@@ -69942,7 +69942,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function User() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "User\u30DA\u30FC\u30B8");
+  var users = [{
+    id: 1,
+    name: 'John',
+    email: 'john@example.com'
+  }, {
+    id: 2,
+    name: 'Kevin',
+    email: 'kevin@test.com'
+  }, {
+    id: 3,
+    name: 'Joshua',
+    email: 'joshua@example.com'
+  }];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "User\u30DA\u30FC\u30B8"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, users.map(function (user) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: user.id
+    }, user.name);
+  })));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (User);
