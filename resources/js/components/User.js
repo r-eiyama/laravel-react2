@@ -10,7 +10,7 @@ function User() {
     }, []);
 
     const getUsers = async () => {
-        const response = await axios.get('/api/user');
+        const response = await axios.get('/api/users');
         setUsers(response.data.users);
     };
 
@@ -22,7 +22,7 @@ function User() {
                 {users.map((user) =>
                     <li key={user.id}>
                         {user.name}
-                        <Link to={`/user/${user.id}`}>
+                        <Link to={`/users/${user.id}`}>
                             詳細
                         </Link>
                     </li>)}

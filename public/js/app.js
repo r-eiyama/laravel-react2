@@ -70617,11 +70617,11 @@ function App() {
     path: "/about",
     component: _About__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
-    path: "/user",
+    path: "/users",
     exact: true,
     component: _User__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
-    path: "/user/:id",
+    path: "/users/:id",
     component: _UserDetail__WEBPACK_IMPORTED_MODULE_6__["default"]
   }))));
 }
@@ -70655,7 +70655,7 @@ function NavBar() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "ml-2"
   }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/user"
+    to: "/users"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "ml-2"
   }, "User"))));
@@ -70742,7 +70742,7 @@ function User() {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/api/user');
+              return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/api/users');
 
             case 2:
               response = _context.sent;
@@ -70765,7 +70765,7 @@ function User() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
       key: user.id
     }, user.name, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      to: "/user/".concat(user.id)
+      to: "/users/".concat(user.id)
     }, "\u8A73\u7D30"));
   })));
 }
@@ -70829,7 +70829,7 @@ function UserDetail(props) {
             case 0:
               console.log(props.match);
               _context.next = 3;
-              return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/user/".concat(props.match.params.id));
+              return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/users/".concat(props.match.params.id));
 
             case 3:
               response = _context.sent;

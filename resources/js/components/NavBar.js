@@ -8,7 +8,7 @@ function NavBar() {
                 <Link to="/about">
                     <li className="ml-2">About</li>
                 </Link>
-                <Link to="/user">
+                <Link to="/users">
                     <li className="ml-2">User</li>
                 </Link>
             </ul>

@@ -10,7 +10,7 @@ function UserDetail(props) {
 
     const getUser = async () => {
         console.log(props.match);
-        const response = await axios.get(`/api/user/${props.match.params.id}`);
+        const response = await axios.get(`/api/users/${props.match.params.id}`);
         setUser(response.data.user)
     };
 
