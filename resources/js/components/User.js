@@ -18,6 +18,9 @@ function User() {
     return (
         <div>
             <h1>Userページ</h1>
+            <Link to={`/users/create`}>
+                作成
+            </Link>
             <ul>
                 {users.map((user) =>
                     <li key={user.id}>
