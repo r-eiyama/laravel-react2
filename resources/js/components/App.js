@@ -8,6 +8,7 @@ import UserDetail from "./UserDetail";
 import UserCreate from "./UserCreate";
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import UserEdit from "./UserEdit";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route path="/about" component={About}/>
                     <Route path="/users" exact component={User}/>
                     <Route path="/users/create" exact component={UserCreate}/>
+                    <Route path="/users/:id/edit" component={UserEdit}/>
                     <Route path="/users/:id" component={UserDetail}/>
                 </Switch>
             </div>

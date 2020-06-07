@@ -65,7 +65,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -77,7 +77,11 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findorfail($id);
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+
+        $user->update();
     }
 
     /**

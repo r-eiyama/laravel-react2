@@ -28,6 +28,9 @@ function User() {
                         <Link to={`/users/${user.id}`}>
                             詳細
                         </Link>
+                        <Link to={`/users/${user.id}/edit`}>
+                            編集
+                        </Link>
                     </li>)}
             </ul>
         </div>
